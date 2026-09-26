@@ -1,8 +1,5 @@
-from fastapi import FastAPI
+"""HTTP 入口：uvicorn main:app"""
 
-app = FastAPI()
+from market_risk.api import create_app
 
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app = create_app()
